@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+
+      <input type="button" value="Click Me" onclick="handleClick()"/>
+
+      <html lang="en">
+        <body>
+            <div id='1' style='background-color: #bce8fi; padding: 10px'>
+                Div1
+                <div id='2' style='background-color:#d9edf7; padding:10px'>
+                    Div2
+                    <div id='3' style='background-color: #3a87ad; padding:10px'>
+                        Div3
+                    </div>
+                </div>
+            </div>
+   
+        </body>
+    </html>
+   
+   
+
+
+
+    </main>
+    <footer></footer>
+    <script>
+    function setup(){
+        function handleClick() {
+            alert("Clicked")
+        }
+    }
+
+
+    var divs = document.getElementsByTagName('div');
+   
+   for (var i = 0; i < divs.length; i++) {
+       divs[i].addEventListener('click', logEvent, false);
+   
+   }
+   function logEvent() {
+       console.log(this.id);
+   }
+
+</script>
+  </body>
+</html>

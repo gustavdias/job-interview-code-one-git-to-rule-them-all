@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./button.css" />
+  </head>
+  <body>
+    <div id="myDiv">
+      <!-- button 1 -->
+      <input id="bt" type="button" value="Button 1" />
+
+      <!-- button 2 -->
+      <input type="button" value="Button 2" onclick="handleClick()" />
+      <!-- button 3 -->
+      <input id="bt3" type="button" value="Button 3" />
+            <!-- button 4 -->
+            <input id="bt4" type="button" value="Button 4" />
+
+    </div>
+    <script>
+      //To add a listener, we use a method called addEventListener
+      // element.addEventListener(type, functionToCall);
+
+      //This doesn't work because it is missing the # to specify id:
+      //var button = document.querySelector("bt");
+      var button = document.querySelector("#bt");
+
+      var myDiv = document.getElementById("myDiv");
+
+      var button3 = document.querySelector("#bt3");
+
+      var button4 = document.querySelector("#bt4");
+
+
+
+      //Button 1
+      //on click doesn't work!!
+      //      button.addEventListener("onclick", function () {
+
+      button.addEventListener("click", function () {
+        console.log("SOMEONE CLICKED THE BUTTON! - 1st handler");
+        myDiv.style.background = "lightblue";
+        bt.style.background = "lightblue";
+      },false);
+      // button.onclick = function () {
+      //     console.log("SOMEONE CLICKED THE BUTTON - 2nd handler!");
+      //     myDiv.style.background = "lightblue";
+      //     bt.style.background = "black";
+      //   };
+
+      //Button 2 handler
+      function handleClick() {
+        alert("Button Two Clicked");
+      }
+
+      //Button 3
+             button3.onclick = function () {
+          console.log("SOMEONE CLICKED THE BUTTON!");
+          myDiv.style.background = "green";
+          bt.style.background = "gray";
+        };
+
+
+        //button 4
+        button4.onclick(function () {
+        console.log("SOMEONE CLICKED THE BUTTON! - 1st handler");
+        myDiv.style.background = "lightblue";
+        bt.style.background = "lightblue";
+      },false);
+    </script>
+  </body>
+</html>
